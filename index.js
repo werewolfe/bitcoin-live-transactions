@@ -36,7 +36,7 @@ module.exports = function(config) {
   }
   this.getAddress = function(address) {
     var result = {}
-    blockdebug('Getting txs for address', address, 'url:', self.api_url + 'txs/?address=' + address)
+    blockdebug('Getting txs for address', address, 'url:', self.api_url + 'addr/' + address)
     return new Promise(function(Success, Reject) {
       result.address = address
       result.in = 0
