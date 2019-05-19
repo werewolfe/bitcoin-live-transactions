@@ -18,8 +18,8 @@
     "url": "https://github.com/guerrerocarlos/bitcoin-live-transactions/issues"
   },
   "dependencies": {
-    "debug": "^2.6.1",
-    "request": "^2.79.0",
-    "socket.io-client": "^1.7.3"
+    "debug": "^2.6.9",
+    "request": "^2.88.0",
+    "socket.io-client": "^1.7.4"
   }
 }
