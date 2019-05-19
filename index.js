@@ -9,8 +9,8 @@ const EventEmitter = require('events').EventEmitter;
 
 module.exports = function(config) {
   if(config === undefined){
-    this.insight_servers = ["https://insight.bitpay.com/", "https://www.localbitcoinschain.com/", "https://search.bitaccess.co/"]
-    this.insight_apis_servers = ["https://insight.bitpay.com/api/", "https://www.localbitcoinschain.com/api/", "https://search.bitaccess.co/insight-api/"]
+    this.insight_servers = ["https://explorer.digibyteapi.com/", "https://www.localbitcoinschain.com/", "https://digiexplorer.info/"]
+    this.insight_apis_servers = ["https://explorer.digibyteapi.com/api/", "digibyte.block30enterprise.com/insight-digibyte-api/", "https://digiexplorer.info/api/"]
   } else {
     if(config.testnet === true){
       this.insight_servers = ["https://test-insight.bitpay.com/"]
@@ -42,7 +42,7 @@ module.exports = function(config) {
       result.in = 0
       result.out = 0
       result.curr = "bits(uBTC)"
-      request(self.api_url + 'txs/?address=' + address, function(error, response, body) {
+      request(self.api_url + 'addr/' + address, function(error, response, body) {
         if (!error && response.statusCode == 200) {
           blockdebug('success :)')
 
