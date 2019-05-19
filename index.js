@@ -9,8 +9,8 @@ const EventEmitter = require('events').EventEmitter;
 
 module.exports = function(config) {
   if(config === undefined){
-    this.insight_servers = ["https://explorer.digibyteapi.com/", "https://www.localbitcoinschain.com/", "https://digiexplorer.info/"]
-    this.insight_apis_servers = ["https://explorer.digibyteapi.com/api/", "digibyte.block30enterprise.com/insight-digibyte-api/", "https://digiexplorer.info/api/"]
+    this.insight_servers = ["https://explorer.digibyteapi.com/", "https://digibyte.block30enterprise.com/", "https://digiexplorer.info/"]
+    this.insight_apis_servers = ["https://explorer.digibyteapi.com/api/", "https://digibyte.block30enterprise.com/insight-digibyte-api/", "https://digiexplorer.info/api/"]
   } else {
     if(config.testnet === true){
       this.insight_servers = ["https://test-insight.bitpay.com/"]
