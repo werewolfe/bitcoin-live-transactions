@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "debug": "^2.6.9",
-    "request": "^2.88.0",
+    "bent": "^1.40.0",
     "socket.io-client": "^1.7.4"
   }
 }
