@@ -3,7 +3,7 @@ const debug = require('debug')('blt')
 const txdebug = require('debug')('blt:tx')
 const hashdebug = require('debug')('blt:hash')
 const blockdebug = require('debug')('blt:blockchain')
-const bent = require('bent')
+const request = require('browser-request')
 
 const EventEmitter = require('events').EventEmitter;
 
@@ -42,7 +42,7 @@ module.exports = function(config) {
       result.in = 0
       result.out = 0
       result.curr = "bits(uBTC)"
-      bent(self.api_url + 'addr/' + address, function(error, response, body) {
+      request(self.api_url + 'addr/' + address, function(error, response, body) {
         if (!error && response.statusCode == 200) {
           blockdebug('success :)')
 
